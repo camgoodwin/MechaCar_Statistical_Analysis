@@ -1,0 +1,5 @@
+MechaCarChart <- read.csv(file='MechaCar_mpg.csv')
+class(MechaCarChart)
+install.packages("dplyr")
+lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, MechaCarChart)
+summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, MechaCarChart))
