@@ -6,3 +6,7 @@ summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_cleara
 Suspension_Coil_Chart <- read.csv(file='Suspension_Coil.csv')
 total_summary <- Suspension_Coil_Chart %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups='keep')
 lot_summary <- Suspension_Coil_Chart %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups='keep')
+t.test(log10(Suspension_Coil_Chart$PSI),mu=mean(1500)) 
+t.test(subset(Suspension_Coil_Chart,Manufacturing_Lot == "Lot1")$PSI, mu=total_summary$Mean)
+t.test(subset(Suspension_Coil_Chart,Manufacturing_Lot == "Lot2")$PSI, mu=total_summary$Mean)
+t.test(subset(Suspension_Coil_Chart,Manufacturing_Lot == "Lot3")$PSI, mu=total_summary$Mean)
