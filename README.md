@@ -44,3 +44,21 @@ Using the subset function to only look at the row for Manufacturing Lot 2 to com
 
 Using the subset function to only look at the row for Manufacturing Lot 3 to compare against the population mean of 1,500 pounds per square inch. The result was a p-value of 0.1589, it can be determined that the two means are statistically not similar therefore we have enough evidence to reject the null hypothesis. 
 ![image](Images/t-test_lot_3.PNG) 
+
+## Study Design: MechaChar vs Competition
+
+### Summary of a statistical study of the MechaCar performing against competition
+Currently we can compare the vehicle length, weight, spoiler angle, ground clearance, all wheel drive, and mpg against the competition.  In this study the mpg would be broken down into mpg for city and for highway. The remaining metrics can be easily compared to other competitors.  In this analysis I am going to add additional metrics that potential buyers are looking at. 
+
+### What metric or metrics are you going to test?
+Additional metrics I will test is the price of the vehicles, the cargo capacity, horsepower, passenger volume, fuel efficiency and turning radius. 
+
+### What is the null hypothesis or alternative hypothesis?
+Null Hypothesis: Since MechaCar's vehicle lengths are significantly smaller than the competitors all the metrics on average for MechaCar will be more favorable.
+Alternative Hypothesis: The competitors metrics on average are more favorable regardless of the vehicle length. 
+
+### What statistical test would you use to test the hypothesis? And why?
+One statistical test I would use is the Chi-Square test to determine if there is a relationship between the vehicle length and corresponding metrics. I would also run multiple linear regression in order to accurately compare the vehicle length to other variables to minimize regression errors.
+
+### What data is needed to run the statistical test?
+The data that is needed to run the statistical test is the vechile length, fuel efficiency, horsepower, and price of the vehicle. Additional information can be gathered for further testing. 
